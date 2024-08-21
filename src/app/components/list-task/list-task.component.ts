@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, OnInit, signal, input } from '@angular/core';
 import { TaskInterface } from '@shared/task.model';
 /* Data model */
 
@@ -8,19 +8,9 @@ import { TaskInterface } from '@shared/task.model';
   styleUrls: ['./list-task.component.css'],
 })
 export class ListTaskComponent implements OnInit {
-  listTask = signal<TaskInterface[]>([
-    {
-      id: 1,
-      title: 'Task 1',
-      completed: false,
-    },
-    {
-      id: 2,
-      title: 'Task 2',
-      completed: false,
-    },
-  ]);
+  listTask = input<TaskInterface[]>();
 
+  counter = signal<number>(0);
   constructor() {}
 
   ngOnInit(): void {}

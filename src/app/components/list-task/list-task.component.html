@@ -1,26 +1,24 @@
-<ul class="todo-list">
-  <li class="completed" *ngFor="let task of listTask()">
-    <div class="view">
-      <input class="toggle" type="checkbox" checked />
-      <label>{{ task.title }}</label>
-      <button class="destroy"></button>
-    </div>
-    <input class="edit" value="Learn JavaScript" />
-  </li>
-  <!-- <li>
+<li [class.completed]="task.completed" *ngFor="let task of listTask()">
+  <div class="view">
+    <input class="toggle" type="checkbox" [checked]="task.completed" />
+    <label>{{ task.title }}</label>
+    <button class="destroy"></button>
+  </div>
+  <input class="edit" value="Learn JavaScript" />
+</li>
+<!-- <li>
     <div class="view">
       <input class="toggle" type="checkbox" />
       <label>Buy a unicorn</label>
       <button class="destroy"></button>
     </div>
     <input class="edit" value="Buy a unicorn" />
-  </li> -->
-  <li class="editing">
-    <div class="view">
-      <input class="toggle" type="checkbox" />
-      <label>Make dishes</label>
-      <button class="destroy"></button>
-    </div>
-    <input class="edit" value="Make dishes" />
   </li>
-</ul>
+<li class="editing">
+  <div class="view">
+    <input class="toggle" type="checkbox" />
+    <label>Make dishes</label>
+    <button class="destroy"></button>
+  </div>
+  <input class="edit" value="Make dishes" />
+</li> -->

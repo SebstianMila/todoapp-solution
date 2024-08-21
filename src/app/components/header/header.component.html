@@ -2,6 +2,14 @@
   <div class="container">
     <h1>My Day</h1>
     <p>All my tasks in one place</p>
-    <input class="new-todo" placeholder="Type new todo" autofocus type="text" />
+    <input
+      #nameTitle
+      (keydown.enter)="sendNewTask()"
+      class="new-todo"
+      placeholder="Type new todo"
+      autofocus
+      type="text"
+      [formControl]="nameTask"
+    />
   </div>
 </header>
