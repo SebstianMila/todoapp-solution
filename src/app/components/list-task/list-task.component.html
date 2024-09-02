@@ -7,11 +7,7 @@
     <input
       class="toggle"
       type="checkbox"
-<<<<<<< Updated upstream
       (click)="updateTask(checkedTask, task, 'completed', !task.completed)"
-=======
-      (click)="checkTask(task)"
->>>>>>> Stashed changes
       [checked]="task.completed"
     />
     <label [for]="task.title" (dblclick)="showHideInput('taskId_' + task.id)">{{
@@ -21,13 +17,9 @@
   </div>
   <input
     [name]="task.title"
-<<<<<<< Updated upstream
     #input
     (keydown.esc)="showHideInput('taskId_' + task.id)"
     (keydown.enter)="updateTask(updateLabel, task, 'title', input.value)"
-=======
-    (keydown.esc)="showHideInput('taskId_' + task.id)"
->>>>>>> Stashed changes
     class="edit"
     [value]="task.title"
   />

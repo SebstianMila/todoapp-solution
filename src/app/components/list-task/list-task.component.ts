@@ -4,12 +4,6 @@ import {
   signal,
   input,
   output,
-<<<<<<< Updated upstream
-=======
-  SimpleChanges,
-  OutputRef,
-  Output,
->>>>>>> Stashed changes
   OutputEmitterRef,
 } from '@angular/core';
 import { TaskInterface } from '@shared/task.model';
@@ -25,18 +19,14 @@ export class ListTaskComponent implements OnInit {
   listTask = input<TaskInterface[]>();
   counter = signal<number>(0);
   checkedTask = output<TaskInterface>();
-<<<<<<< Updated upstream
   updateLabel = output<TaskInterface>();
 
-=======
->>>>>>> Stashed changes
   editTask = new FormControl();
 
   checkTask(task: TaskInterface) {
     this.checkedTask.emit({ ...task, completed: !task.completed });
   }
 
-<<<<<<< Updated upstream
   updateTask(
     outerInput: OutputEmitterRef<TaskInterface | string>,
     task: TaskInterface,
@@ -50,22 +40,11 @@ export class ListTaskComponent implements OnInit {
 
   showHideInput(labelElement: string) {
     const liElement = document.getElementById(labelElement);
-    console.log(liElement);
 
-=======
-  showHideInput(labelElement: string) {
-    const liElement = document.getElementById(labelElement);
->>>>>>> Stashed changes
     if (!liElement) return;
     const inputElement = liElement?.children[1] as HTMLInputElement;
     liElement.classList.toggle('editing');
     inputElement?.focus();
-<<<<<<< Updated upstream
-=======
-
-    liElement.classList.toggle('editing');
-    inputElement.classList.toggle('focus');
->>>>>>> Stashed changes
   }
   /*
   ngOnChanges(changes: SimpleChanges) {
