@@ -6,15 +6,22 @@
       <ul class="todo-list">
         <app-list-task
           (checkedTask)="checkedTask($event)"
+<<<<<<< Updated upstream
           (updateLabel)="checkedTask($event)"
+=======
+>>>>>>> Stashed changes
           [listTask]="list()"
         ></app-list-task>
       </ul>
       <!-- This footer should be hidden by default and shown when there are todos -->
+<<<<<<< Updated upstream
       <app-footer
         *ngIf="counter() > 0"
         [counterTask]="counter().valueOf()"
       ></app-footer>
+=======
+      <app-footer *ngIf="counter() > 0" [counterTask]="counter()"></app-footer>
+>>>>>>> Stashed changes
     </section>
   </div>
 </section>
