@@ -2,12 +2,19 @@
   <app-header (title)="addTask($event)"></app-header>
   <div class="container todoapp-wrapper">
     <!-- This section should be hidden by default and shown when there are todos -->
-    <section class="main">
+    <section *ngIf="counter() > 0" class="main">
       <ul class="todo-list">
-        <app-list-task [listTask]="list()"></app-list-task>
+        <app-list-task
+          (checkedTask)="checkedTask($event)"
+          (updateLabel)="checkedTask($event)"
+          [listTask]="list()"
+        ></app-list-task>
       </ul>
       <!-- This footer should be hidden by default and shown when there are todos -->
-      <app-footer [counterTask]="counter().valueOf()"></app-footer>
+      <app-footer
+        *ngIf="counter() > 0"
+        [counterTask]="counter().valueOf()"
+      ></app-footer>
     </section>
   </div>
 </section>

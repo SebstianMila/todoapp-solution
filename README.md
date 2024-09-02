@@ -20,11 +20,11 @@ MyDayApp es una aplicación para gestionar tareas de forma sencilla, fácil y en
 1. Comprobar ambiente de desarrollo, con el comando `ng serve`
 
 ---
+
 ### Instalación de ambiente para pruebas e2e
 
-1. Instalar requerimientos para pruebas e2e, con el comando  `npm run e2e:install`
-1. Comprobar que se corran pruebas e2e, con el comando  `npm run e2e`
-
+1. Instalar requerimientos para pruebas e2e, con el comando `npm run e2e:install`
+1. Comprobar que se corran pruebas e2e, con el comando `npm run e2e`
 
 ## Configuración
 
@@ -104,30 +104,30 @@ El modelo de datos recomendado para una tarea es:
 - title: string
 - completed: boolen
 
-Para crear una aplicación de tareas consistente y útil para los usuarios, la aplicación debe cumplir con la siguiente lista de 9 funcionalidades.
+pAra crear una aplicación de tareas consistente y útil para los usuarios, la aplicación debe cumplir con la siguiente lista de 9 funcionalidades.
 
 ### 1. Ocultar las secciones main y footer
 
-- Cuando no hay tareas, los elementos con ID `#main` y `#footer` deberían estar ocultos.
+- ~~Cuando no hay tareas, los elementos con ID `#main` y `#footer` deberían estar ocultos~~.
 
-### 2. Crear una nueva tarea.
+### 2. Crear una nueva tarea
 
-- Se debe crear una nueva tarea se debe usar el input principal de la aplicación.
-- Este input debe enfocarse cuando se cargue la página, preferiblemente utilizando el atributo `autofocus` en el input.
-- Al presionar la tecla Enter la tarea se crea con el estado **pending** y se agrega a la lista de tareas y el input debería quedar en limpio.
-- Asegúrate de usar métodos como `.trim()` para limpiar espacios al inicio o al final y verifica que la tarea no sea un `string` vacío.
+- ~~Se debe crear una nueva tarea se debe usar el input principal de la aplicación.~~
+- ~~este input debe enfocarse cuando se cargue la página, preferiblemente utilizando el atributo `autofocus` en el input.~~
+- ~~Al presionar la tecla Enter la tarea se crea con el estado **pending** y se agrega a la lista de tareas y el input debería quedar en limpio.~~
+- ~~Asegúrate de usar métodos como `.trim()` para limpiar espacios al inicio o al final y verifica que la tarea no sea un `string` vacío.~~
 
 ### 3. Una tarea
 
 Una tarea debería tener 3 posibles interacciones:
 
-1. Cuando se haga clic en el checkbox las tareas es marcada como **completed**, de igual manera si se vuele a hacer clic sobre en el checkbox vuelve a su estado de **pending**.
-2. Si se hace doble clic en el  `<label>` se activa el modo edición.
-3. Si se hace la acción `:hover` en una tarea se debería mostrar el botón para eliminar (`.destroy`).
+1. ~~Cuando se haga clic en el checkbox las tareas es marcada como **completed**, de igual manera si se vuele a hacer clic sobre en el checkbox vuelve a su estado de **pending**.~~
+2. ~~Si se hace doble clic en el  `<label>` se activa el modo edición.~~
+3. ~~Si se hace la acción `:hover` en una tarea se debería mostrar el botón para eliminar (`.destroy`)~~.
 
 ### 4. Editando una tarea
 
-- Cuando el modo edición está activado, se deberían ocultar los otros elementos y se mostrará un input que contiene el título de la tarea pendiente, que debe estar enfocado (`.focus()`).
+- ~~Cuando el modo edición está activado, se deberían ocultar los otros elementos y se mostrará un input que contiene el título de la tarea pendiente, que debe estar enfocado (`.focus()`).~~
 - La edición debe guardarse cuando se presione la tecla Enter y salir del modo edición.
 - Asegúrate de usar métodos como `.trim()` limpiar espacios al inicio o al final.
 - Si se presiona la tecla Escape durante la edición, se debe salir del modo edición y descartar cualquier cambio.

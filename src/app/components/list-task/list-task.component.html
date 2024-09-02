@@ -1,10 +1,28 @@
-<li [class.completed]="task.completed" *ngFor="let task of listTask()">
+<li
+  [id]="'taskId_' + task.id"
+  [class.completed]="task.completed"
+  *ngFor="let task of listTask()"
+>
   <div class="view">
-    <input class="toggle" type="checkbox" [checked]="task.completed" />
-    <label>{{ task.title }}</label>
+    <input
+      class="toggle"
+      type="checkbox"
+      (click)="updateTask(checkedTask, task, 'completed', !task.completed)"
+      [checked]="task.completed"
+    />
+    <label [for]="task.title" (dblclick)="showHideInput('taskId_' + task.id)">{{
+      task.title
+    }}</label>
     <button class="destroy"></button>
   </div>
-  <input class="edit" value="Learn JavaScript" />
+  <input
+    [name]="task.title"
+    #input
+    (keydown.esc)="showHideInput('taskId_' + task.id)"
+    (keydown.enter)="updateTask(updateLabel, task, 'title', input.value)"
+    class="edit"
+    [value]="task.title"
+  />
 </li>
 <!-- <li>
     <div class="view">
