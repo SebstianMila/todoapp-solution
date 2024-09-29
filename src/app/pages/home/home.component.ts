@@ -42,17 +42,22 @@ export class HomeComponent implements OnInit {
     const tasks = this.list();
 
     if (filter === 'pending') {
-      console.log(tasks.filter((task) => !task.completed));
-
       return tasks.filter((task) => !task.completed);
     }
+
     if (filter === 'completed') {
       return tasks.filter((task) => task.completed);
     }
-
     return tasks;
   });
 
+  changeFilter(paramsFilter: any) {
+    this.filter.set(paramsFilter);
+  }
+
+  clearTasks() {
+    this.list.update((tasks) => tasks.filter((task) => !task.completed));
+  }
   constructor() {}
 
   ngOnInit(): void {}

@@ -128,19 +128,19 @@ Una tarea debería tener 3 posibles interacciones:
 ### 4. Editando una tarea
 
 - ~~Cuando el modo edición está activado, se deberían ocultar los otros elementos y se mostrará un input que contiene el título de la tarea pendiente, que debe estar enfocado (`.focus()`).~~
-- La edición debe guardarse cuando se presione la tecla Enter y salir del modo edición.
-- Asegúrate de usar métodos como `.trim()` limpiar espacios al inicio o al final.
-- Si se presiona la tecla Escape durante la edición, se debe salir del modo edición y descartar cualquier cambio.
+- ~~La edición debe guardarse cuando se presione la tecla Enter y salir del modo edición~~
+- ~~Asegúrate de usar métodos como `.trim()` limpiar espacios al inicio o al final.~~
+- ~~Si se presiona la tecla Escape durante la edición, se debe salir del modo edición y descartar cualquier cambio.~~
 
 ### 5. Contador
 
-- En el footer se debería mostrar el número de tareas en estado **pending**.
-- Asegúrese de que el número esté envuelto por una etiqueta `<strong>`.
-- También asegúrese de pluralizar la palabra `item` correctamente, por ejemplo: `0 items`, `1 item`, `2 items`.
+- ~~En el footer se debería mostrar el número de tareas en estado **pending**.~~
+- ~~Asegúrese de que el número esté envuelto por una etiqueta `<strong>`.~~
+- ~~También asegúrese de pluralizar la palabra `item` correctamente, por ejemplo: `0 items`, `1 item`, `2 items`.~~
 
 ### 6. Botón de limpiar
 
-- Debería existir un botón para eliminar todas las tareas que están con estado de **completed**.
+- ~~Debería existir un botón para eliminar todas las tareas que están con estado de **completed**.~~
 
 ### 7. Persistencia
 
@@ -152,9 +152,9 @@ Una tarea debería tener 3 posibles interacciones:
 
 Deben existir tres filtros que funcione desde la URL y funcionan como links en el footer:
 
-- `/all`: Muestra todas las tareas tanto las que están en estado de **completed** y **pending**.
-- `/pending`: Muestra todas las tareas en estado **pending**.
-- `/completed`: Muestra todas las tareas en estado **completed**.
+- ~~`/all`: Muestra todas las tareas tanto las que están en estado de **completed** y **pending**.~~
+- ~~`/pending`: Muestra todas las tareas en estado **pending**.~~
+- ~~`/completed`: Muestra todas las tareas en estado **completed**.~~
 
 ### 9. Deployment
 

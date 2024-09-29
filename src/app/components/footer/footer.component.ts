@@ -1,4 +1,5 @@
-import { Component, output, input, OnInit } from '@angular/core';
+import { Component, output, input, OnInit, Output } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -7,6 +8,15 @@ import { Component, output, input, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
   counterTask = input.required<number>();
+  filter = output<string>();
+  cleanTasks = output();
+  setFilter(valFilter: 'all' | 'pending' | 'completed') {
+    this.filter.emit(valFilter);
+  }
+
+  clearListTasks() {
+    this.cleanTasks.emit();
+  }
 
   constructor() {}
 
